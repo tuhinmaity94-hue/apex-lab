@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1244" height="1055" viewBox="0 0 1244 1055" role="img" aria-labelledby="title description">
+<title id="title">Apex Lab ER Diagram</title>
+<desc id="description">SQLite schema with 13 tables and 10 foreign keys. Arrows point from the foreign key table to the referenced primary key table.</desc>
+<style>text{font-family:Segoe UI,Arial,sans-serif;fill:#000}.title{font-size:32px;font-weight:700}.subtitle{font-size:14px}.entity{font-family:Consolas,monospace;font-size:18px;font-weight:700;fill:#fff}.caption{font-size:12px}.header-caption{fill:#fff}.field{font-family:Consolas,monospace;font-size:14px}.field-key{font-weight:700}.key{font-size:11px;font-weight:700}.group{font-size:16px;font-weight:700}.legend{font-size:13px}</style>
+<rect width="1244" height="1055" fill="#fff"/>
+<text x="52" y="49" class="title">Apex Lab | ER Diagram</text>
+<text x="52" y="76" class="subtitle">SQLite schema | 13 tables | 10 foreign keys | Key and selected data columns</text>
+<path d="M52 94H1192M52 816H1192" fill="none" stroke="#000"/>
+<text x="52" y="838" class="group">Standalone Tables (No Foreign Keys)</text>
+<polyline points="298,176 350,176" fill="none" stroke="#000" stroke-width="2.2" stroke-linejoin="round"/>
+<polygon class="relation-arrow" points="299,176 310,181 310,171" fill="#000"/>
+<polyline points="596,176 648,176" fill="none" stroke="#000" stroke-width="2.2" stroke-linejoin="round"/>
+<polygon class="relation-arrow" points="597,176 608,181 608,171" fill="#000"/>
+<polyline points="946,176 894,176" fill="none" stroke="#000" stroke-width="2.2" stroke-linejoin="round"/>
+<polygon class="relation-arrow" points="945,176 934,171 934,181" fill="#000"/>
+<polyline points="110,266 110,390" fill="none" stroke="#000" stroke-width="2.2" stroke-dasharray="7 5" stroke-linejoin="round"/>
+<polygon class="relation-arrow" points="110,267 105,278 115,278" fill="#000"/>
+<polyline points="298,244 322,244 322,462 350,462" fill="none" stroke="#000" stroke-width="2.2" stroke-linejoin="round"/>
+<polygon class="relation-arrow" points="299,244 310,249 310,239" fill="#000"/>
+<polyline points="997,287 997,338 472,338 472,390" fill="none" stroke="#000" stroke-width="2.2" stroke-linejoin="round"/>
+<polygon class="relation-arrow" points="997,288 992,299 1002,299" fill="#000"/>
+<polyline points="1122,287 1122,362 770,362 770,390" fill="none" stroke="#000" stroke-width="2.2" stroke-linejoin="round"/>
+<polygon class="relation-arrow" points="1122,288 1117,299 1127,299" fill="#000"/>
+<polyline points="946,460 894,460" fill="none" stroke="#000" stroke-width="2.2" stroke-linejoin="round"/>
+<polygon class="relation-arrow" points="945,460 934,455 934,465" fill="#000"/>
+<polyline points="770,599 770,640" fill="none" stroke="#000" stroke-width="2.2" stroke-linejoin="round"/>
+<polygon class="relation-arrow" points="770,600 765,611 775,611" fill="#000"/>
+<polyline points="1070,640 1070,536" fill="none" stroke="#000" stroke-width="2.2" stroke-linejoin="round"/>
+<polygon class="relation-arrow" points="1070,639 1075,628 1065,628" fill="#000"/>
+<rect x="52" y="120" width="246" height="146" rx="7" fill="#fff" stroke="#000"/>
+<path d="M59 121H291Q297 121 297 127V169H53V127Q53 121 59 121Z" fill="#000"/>
+<text x="65" y="143" class="entity">user</text>
+<text x="65" y="162" class="caption header-caption">User Account</text>
+<text x="65" y="188" class="field field-key">id</text>
+<text x="261" y="188" class="key">PK</text>
+<text x="65" y="209" class="field">username</text>
+<text x="261" y="209" class="key">UQ</text>
+<text x="65" y="230" class="field">role</text>
+<text x="65" y="251" class="field">created_at</text>
+<rect x="350" y="120" width="246" height="209" rx="7" fill="#fff" stroke="#000"/>
+<path d="M357 121H589Q595 121 595 127V169H351V127Q351 121 357 121Z" fill="#000"/>
+<text x="363" y="143" class="entity">match</text>
+<text x="363" y="162" class="caption header-caption">Ranked Match</text>
+<text x="363" y="188" class="field field-key">id</text>
+<text x="559" y="188" class="key">PK</text>
+<text x="363" y="209" class="field field-key">user_id</text>
+<text x="559" y="209" class="key">FK</text>
+<text x="363" y="230" class="field">played_at</text>
+<text x="363" y="251" class="field">map_name</text>
+<text x="363" y="272" class="field">placement</text>
+<text x="363" y="293" class="field">rp</text>
+<text x="363" y="314" class="field">is_sample</text>
+<rect x="648" y="120" width="246" height="146" rx="7" fill="#fff" stroke="#000"/>
+<path d="M655 121H887Q893 121 893 127V169H649V127Q649 121 655 121Z" fill="#000"/>
+<text x="661" y="143" class="entity">match_weapon</text>
+<text x="661" y="162" class="caption header-caption">Match Loadout</text>
+<text x="661" y="188" class="field field-key">id</text>
+<text x="857" y="188" class="key">PK</text>
+<text x="661" y="209" class="field field-key">match_id</text>
+<text x="857" y="209" class="key">FK</text>
+<text x="661" y="230" class="field field-key">weapon_id</text>
+<text x="857" y="230" class="key">FK</text>
+<text x="661" y="251" class="field">slot</text>
+<rect x="946" y="120" width="246" height="167" rx="7" fill="#fff" stroke="#000"/>
+<path d="M953 121H1185Q1191 121 1191 127V169H947V127Q947 121 953 121Z" fill="#000"/>
+<text x="959" y="143" class="entity">weapon</text>
+<text x="959" y="162" class="caption header-caption">Weapon</text>
+<text x="959" y="188" class="field field-key">id</text>
+<text x="1155" y="188" class="key">PK</text>
+<text x="959" y="209" class="field">slug</text>
+<text x="1155" y="209" class="key">UQ</text>
+<text x="959" y="230" class="field">name</text>
+<text x="959" y="251" class="field">category</text>
+<text x="959" y="272" class="field">ammo</text>
+<rect x="52" y="390" width="246" height="146" rx="7" fill="#fff" stroke="#000"/>
+<path d="M59 391H291Q297 391 297 397V439H53V397Q53 391 59 391Z" fill="#000"/>
+<text x="65" y="413" class="entity">audit</text>
+<text x="65" y="432" class="caption header-caption">Audit Log</text>
+<text x="65" y="458" class="field field-key">id</text>
+<text x="261" y="458" class="key">PK</text>
+<text x="65" y="479" class="field field-key">user_id</text>
+<text x="261" y="479" class="key">FK</text>
+<text x="173" y="479" class="caption">Nullable</text>
+<text x="65" y="500" class="field">action</text>
+<text x="65" y="521" class="field">created_at</text>
+<rect x="350" y="390" width="246" height="125" rx="7" fill="#fff" stroke="#000"/>
+<path d="M357 391H589Q595 391 595 397V439H351V397Q351 391 357 391Z" fill="#000"/>
+<text x="363" y="413" class="entity">favorite</text>
+<text x="363" y="432" class="caption header-caption">Weapon Favorite</text>
+<text x="363" y="458" class="field field-key">id</text>
+<text x="559" y="458" class="key">PK</text>
+<text x="363" y="479" class="field field-key">user_id</text>
+<text x="559" y="479" class="key">FK</text>
+<text x="363" y="500" class="field field-key">weapon_id</text>
+<text x="559" y="500" class="key">FK</text>
+<rect x="648" y="390" width="246" height="209" rx="7" fill="#fff" stroke="#000"/>
+<path d="M655 391H887Q893 391 893 397V439H649V397Q649 391 655 391Z" fill="#000"/>
+<text x="661" y="413" class="entity">weapon_stat</text>
+<text x="661" y="432" class="caption header-caption">Weapon Stats by Patch</text>
+<text x="661" y="458" class="field field-key">id</text>
+<text x="857" y="458" class="key">PK</text>
+<text x="661" y="479" class="field field-key">weapon_id</text>
+<text x="857" y="479" class="key">FK</text>
+<text x="661" y="500" class="field field-key">patch_id</text>
+<text x="857" y="500" class="key">FK</text>
+<text x="661" y="521" class="field">body</text>
+<text x="661" y="542" class="field">head</text>
+<text x="661" y="563" class="field">leg</text>
+<text x="661" y="584" class="field">rpm</text>
+<rect x="946" y="390" width="246" height="146" rx="7" fill="#fff" stroke="#000"/>
+<path d="M953 391H1185Q1191 391 1191 397V439H947V397Q947 391 953 391Z" fill="#000"/>
+<text x="959" y="413" class="entity">patch</text>
+<text x="959" y="432" class="caption header-caption">Game Patch</text>
+<text x="959" y="458" class="field field-key">id</text>
+<text x="1155" y="458" class="key">PK</text>
+<text x="959" y="479" class="field field-key">season_id</text>
+<text x="1155" y="479" class="key">FK</text>
+<text x="959" y="500" class="field">name</text>
+<text x="1155" y="500" class="key">UQ</text>
+<text x="959" y="521" class="field">released_at</text>
+<rect x="648" y="640" width="246" height="146" rx="7" fill="#fff" stroke="#000"/>
+<path d="M655 641H887Q893 641 893 647V689H649V647Q649 641 655 641Z" fill="#000"/>
+<text x="661" y="663" class="entity">magazine</text>
+<text x="661" y="682" class="caption header-caption">Magazine Tier</text>
+<text x="661" y="708" class="field field-key">id</text>
+<text x="857" y="708" class="key">PK</text>
+<text x="661" y="729" class="field field-key">stat_id</text>
+<text x="857" y="729" class="key">FK</text>
+<text x="661" y="750" class="field">tier</text>
+<text x="661" y="771" class="field">capacity</text>
+<rect x="946" y="640" width="246" height="125" rx="7" fill="#fff" stroke="#000"/>
+<path d="M953 641H1185Q1191 641 1191 647V689H947V647Q947 641 953 641Z" fill="#000"/>
+<text x="959" y="663" class="entity">season</text>
+<text x="959" y="682" class="caption header-caption">Season</text>
+<text x="959" y="708" class="field field-key">id</text>
+<text x="1155" y="708" class="key">PK</text>
+<text x="959" y="729" class="field">number</text>
+<text x="1155" y="729" class="key">UQ</text>
+<text x="959" y="750" class="field">name</text>
+<rect x="52" y="851" width="246" height="146" rx="7" fill="#fff" stroke="#000"/>
+<path d="M59 852H291Q297 852 297 858V900H53V858Q53 852 59 852Z" fill="#000"/>
+<text x="65" y="874" class="entity">reference_ttk</text>
+<text x="65" y="893" class="caption header-caption">TTK Reference Archive</text>
+<text x="65" y="919" class="field field-key">id</text>
+<text x="261" y="919" class="key">PK</text>
+<text x="65" y="940" class="field">season</text>
+<text x="65" y="961" class="field">label</text>
+<text x="65" y="982" class="field">seconds</text>
+<rect x="350" y="851" width="246" height="104" rx="7" fill="#fff" stroke="#000"/>
+<path d="M357 852H589Q595 852 595 858V900H351V858Q351 852 357 852Z" fill="#000"/>
+<text x="363" y="874" class="entity">schema_version</text>
+<text x="363" y="893" class="caption header-caption">Schema Version</text>
+<text x="363" y="919" class="field field-key">version</text>
+<text x="559" y="919" class="key">PK</text>
+<text x="363" y="940" class="field">applied_at</text>
+<rect x="648" y="851" width="246" height="146" rx="7" fill="#fff" stroke="#000"/>
+<path d="M655 852H887Q893 852 893 858V900H649V858Q649 852 655 852Z" fill="#000"/>
+<text x="661" y="874" class="entity">predator_snapshot</text>
+<text x="661" y="893" class="caption header-caption">Retired Feature Archive</text>
+<text x="661" y="919" class="field field-key">id</text>
+<text x="857" y="919" class="key">PK</text>
+<text x="661" y="940" class="field">platform</text>
+<text x="661" y="961" class="field">rp</text>
+<text x="661" y="982" class="field">captured_at</text>
+<text x="946" y="875" class="group">Legend</text>
+<text x="946" y="900" class="legend">PK: Primary key   FK: Foreign key</text>
+<text x="946" y="922" class="legend">UQ: Unique column</text>
+<path d="M946 947H979" stroke="#000" stroke-width="2.2"/>
+<polygon points="979,947 970,943 970,951" fill="#000"/>
+<text x="988" y="951" class="legend">Required reference</text>
+<path d="M946 971H979" stroke="#000" stroke-width="2.2" stroke-dasharray="7 5"/>
+<polygon points="979,971 970,967 970,975" fill="#000"/>
+<text x="988" y="975" class="legend">Optional reference</text>
+<text x="946" y="1000" class="legend">Arrow points to the referenced table.</text>
+</svg>

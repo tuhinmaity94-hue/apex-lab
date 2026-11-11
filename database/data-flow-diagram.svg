@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="938" viewBox="0 0 1440 938" role="img" aria-labelledby="title desc">
+<title id="title">Apex Lab Level 1 Data Flow Diagram</title>
+<desc id="desc">Four application processes connect players and administrators to accounts, weapon data, favorites, match records and audit logs in SQLite. Arrows show the direction and contents of each data flow.</desc>
+<style>text{font-family:Arial,sans-serif;fill:#000}.title{font-size:33px;font-weight:700}.subtitle{font-size:15px}.heading{font-size:13px;font-weight:700;letter-spacing:1.4px}.label{font-size:17px;font-weight:700}.detail{font-size:13px}.flow{font-size:14px}.id{font-size:14px;font-weight:700}.legend{font-size:13px}</style>
+<rect width="1440" height="938" fill="#fff"/>
+<text x="48" y="47" class="title" text-anchor="start">Apex Lab | Level 1 Data Flow Diagram</text>
+<text x="48" y="75" class="subtitle" text-anchor="start">Vue 3 interface  /  Flask API processes  /  SQLite data stores</text>
+<path d="M48 94H1392" stroke="#000" stroke-width="1.5"/>
+<text x="48" y="116" class="heading" text-anchor="start">EXTERNAL ENTITY</text>
+<text x="525" y="116" class="heading" text-anchor="start">APPLICATION PROCESS</text>
+<text x="1148" y="116" class="heading" text-anchor="start">SQLITE DATA STORE</text>
+<g class="process" data-process="1.0">
+<rect x="48" y="165" width="194" height="81" rx="0" fill="#fff" stroke="#000" stroke-width="1.7"/>
+<text x="145" y="211" class="label" text-anchor="middle">Player / Administrator</text>
+<rect x="525" y="143" width="325" height="140" rx="16" fill="#fff" stroke="#000" stroke-width="1.7"/>
+<text x="542" y="171" class="id" text-anchor="start">1.0</text>
+<text x="542" y="196" class="label" text-anchor="start">Manage Accounts</text>
+<text x="542" y="222" class="detail" text-anchor="start">Register, sign in or change password</text>
+<text x="542" y="242" class="detail" text-anchor="start">Verify identity and manage sessions</text>
+<path class="flow-line" d="M242 192H515" stroke="#000" stroke-width="1.6" fill="none"/>
+<polygon points="525,192 515,187.5 515,196.5" fill="#000"/>
+<text x="383.5" y="185" class="flow" text-anchor="middle">Credentials or account changes</text>
+<path class="flow-line" d="M525 228H252" stroke="#000" stroke-width="1.6" fill="none"/>
+<polygon points="242,228 252,223.5 252,232.5" fill="#000"/>
+<text x="383.5" y="221" class="flow" text-anchor="middle">Sign-in result or session status</text>
+<g class="store" data-store="D1">
+<path d="M1392 134H1148V206H1392M1193 134V206" fill="none" stroke="#000" stroke-width="1.7"/>
+<text x="1170" y="176" class="id" text-anchor="middle">D1</text>
+<text x="1204" y="158" class="label" text-anchor="start">Accounts</text>
+<text x="1204" y="179" class="detail" text-anchor="start">user</text>
+</g>
+<path class="flow-line" d="M850 165H1138" stroke="#000" stroke-width="1.6" fill="none"/>
+<polygon points="1148,165 1138,160.5 1138,169.5" fill="#000"/>
+<text x="999.0" y="158" class="flow" text-anchor="middle">New account or updated password hash</text>
+<path class="flow-line" d="M1148 193H860" stroke="#000" stroke-width="1.6" fill="none"/>
+<polygon points="850,193 860,188.5 860,197.5" fill="#000"/>
+<text x="999.0" y="186" class="flow" text-anchor="middle">Account and password hash</text>
+</g>
+<g class="process" data-process="2.0">
+<rect x="48" y="357" width="194" height="81" rx="0" fill="#fff" stroke="#000" stroke-width="1.7"/>
+<text x="145" y="403" class="label" text-anchor="middle">Player</text>
+<rect x="525" y="335" width="325" height="140" rx="16" fill="#fff" stroke="#000" stroke-width="1.7"/>
+<text x="542" y="363" class="id" text-anchor="start">2.0</text>
+<text x="542" y="388" class="label" text-anchor="start">Browse Weapons and Compare TTK</text>
+<text x="542" y="414" class="detail" text-anchor="start">Browse weapon stats by game version</text>
+<text x="542" y="434" class="detail" text-anchor="start">Calculate TTK and manage favorites</text>
+<path class="flow-line" d="M242 384H515" stroke="#000" stroke-width="1.6" fill="none"/>
+<polygon points="525,384 515,379.5 515,388.5" fill="#000"/>
+<text x="383.5" y="377" class="flow" text-anchor="middle">Weapon filters, TTK inputs or favorite choice</text>
+<path class="flow-line" d="M525 420H252" stroke="#000" stroke-width="1.6" fill="none"/>
+<polygon points="242,420 252,415.5 252,424.5" fill="#000"/>
+<text x="383.5" y="413" class="flow" text-anchor="middle">Weapon data, TTK results or favorite status</text>
+<g class="store" data-store="D2">
+<path d="M1392 326H1148V398H1392M1193 326V398" fill="none" stroke="#000" stroke-width="1.7"/>
+<text x="1170" y="368" class="id" text-anchor="middle">D2</text>
+<text x="1204" y="350" class="label" text-anchor="start">Weapons and Versions</text>
+<text x="1204" y="371" class="detail" text-anchor="start">season, patch, weapon,</text>
+<text x="1204" y="387" class="detail" text-anchor="start">weapon_stat, magazine</text>
+</g>
+<path class="flow-line" d="M1148 372H860" stroke="#000" stroke-width="1.6" fill="none"/>
+<polygon points="850,372 860,367.5 860,376.5" fill="#000"/>
+<text x="999.0" y="365" class="flow" text-anchor="middle">Weapon and version stats</text>
+<g class="store" data-store="D3">
+<path d="M1392 408H1148V480H1392M1193 408V480" fill="none" stroke="#000" stroke-width="1.7"/>
+<text x="1170" y="450" class="id" text-anchor="middle">D3</text>
+<text x="1204" y="432" class="label" text-anchor="start">Favorites</text>
+<text x="1204" y="453" class="detail" text-anchor="start">favorite</text>
+</g>
+<path class="flow-line" d="M850 439H1138" stroke="#000" stroke-width="1.6" fill="none"/>
+<polygon points="1148,439 1138,434.5 1138,443.5" fill="#000"/>
+<text x="999.0" y="432" class="flow" text-anchor="middle">Favorite additions or removals</text>
+<path class="flow-line" d="M1148 467H860" stroke="#000" stroke-width="1.6" fill="none"/>
+<polygon points="850,467 860,462.5 860,471.5" fill="#000"/>
+<text x="999.0" y="460" class="flow" text-anchor="middle">Saved favorites</text>
+</g>
+<g class="process" data-process="3.0">
+<rect x="48" y="549" width="194" height="81" rx="0" fill="#fff" stroke="#000" stroke-width="1.7"/>
+<text x="145" y="595" class="label" text-anchor="middle">Signed-in Player</text>
+<rect x="525" y="527" width="325" height="140" rx="16" fill="#fff" stroke="#000" stroke-width="1.7"/>
+<text x="542" y="555" class="id" text-anchor="start">3.0</text>
+<text x="542" y="580" class="label" text-anchor="start">Manage Ranked Match Journal</text>
+<text x="542" y="606" class="detail" text-anchor="start">Record, edit and delete matches</text>
+<text x="542" y="626" class="detail" text-anchor="start">Filter, summarize and export data</text>
+<path class="flow-line" d="M242 576H515" stroke="#000" stroke-width="1.6" fill="none"/>
+<polygon points="525,576 515,571.5 515,580.5" fill="#000"/>
+<text x="383.5" y="569" class="flow" text-anchor="middle">Match changes, filters or export request</text>
+<path class="flow-line" d="M525 612H252" stroke="#000" stroke-width="1.6" fill="none"/>
+<polygon points="242,612 252,607.5 252,616.5" fill="#000"/>
+<text x="383.5" y="605" class="flow" text-anchor="middle">Match list, statistics or CSV</text>
+<g class="store" data-store="D4">
+<path d="M1392 518H1148V590H1392M1193 518V590" fill="none" stroke="#000" stroke-width="1.7"/>
+<text x="1170" y="560" class="id" text-anchor="middle">D4</text>
+<text x="1204" y="542" class="label" text-anchor="start">Match Records</text>
+<text x="1204" y="563" class="detail" text-anchor="start">match, match_weapon</text>
+</g>
+<path class="flow-line" d="M850 549H1138" stroke="#000" stroke-width="1.6" fill="none"/>
+<polygon points="1148,549 1138,544.5 1138,553.5" fill="#000"/>
+<text x="999.0" y="542" class="flow" text-anchor="middle">Match and loadout changes</text>
+<path class="flow-line" d="M1148 577H860" stroke="#000" stroke-width="1.6" fill="none"/>
+<polygon points="850,577 860,572.5 860,581.5" fill="#000"/>
+<text x="999.0" y="570" class="flow" text-anchor="middle">Matches, loadouts and aggregates</text>
+<g class="store" data-store="D2">
+<path d="M1392 600H1148V672H1392M1193 600V672" fill="none" stroke="#000" stroke-width="1.7"/>
+<text x="1170" y="642" class="id" text-anchor="middle">D2</text>
+<text x="1204" y="624" class="label" text-anchor="start">Weapons and Versions</text>
+<text x="1204" y="645" class="detail" text-anchor="start">season, patch, weapon,</text>
+<text x="1204" y="661" class="detail" text-anchor="start">weapon_stat, magazine</text>
+</g>
+<path class="flow-line" d="M1148 646H860" stroke="#000" stroke-width="1.6" fill="none"/>
+<polygon points="850,646 860,641.5 860,650.5" fill="#000"/>
+<text x="999.0" y="639" class="flow" text-anchor="middle">Weapon IDs and names</text>
+</g>
+<g class="process" data-process="4.0">
+<rect x="48" y="741" width="194" height="81" rx="0" fill="#fff" stroke="#000" stroke-width="1.7"/>
+<text x="145" y="787" class="label" text-anchor="middle">Administrator</text>
+<rect x="525" y="719" width="325" height="140" rx="16" fill="#fff" stroke="#000" stroke-width="1.7"/>
+<text x="542" y="747" class="id" text-anchor="start">4.0</text>
+<text x="542" y="772" class="label" text-anchor="start">Maintain Weapon Data</text>
+<text x="542" y="798" class="detail" text-anchor="start">Validate edits and imports</text>
+<text x="542" y="818" class="detail" text-anchor="start">Save changes and review the audit log</text>
+<path class="flow-line" d="M242 768H515" stroke="#000" stroke-width="1.6" fill="none"/>
+<polygon points="525,768 515,763.5 515,772.5" fill="#000"/>
+<text x="383.5" y="761" class="flow" text-anchor="middle">Weapon edits, imports or audit request</text>
+<path class="flow-line" d="M525 804H252" stroke="#000" stroke-width="1.6" fill="none"/>
+<polygon points="242,804 252,799.5 252,808.5" fill="#000"/>
+<text x="383.5" y="797" class="flow" text-anchor="middle">Save result or audit history</text>
+<g class="store" data-store="D2">
+<path d="M1392 710H1148V782H1392M1193 710V782" fill="none" stroke="#000" stroke-width="1.7"/>
+<text x="1170" y="752" class="id" text-anchor="middle">D2</text>
+<text x="1204" y="734" class="label" text-anchor="start">Weapons and Versions</text>
+<text x="1204" y="755" class="detail" text-anchor="start">season, patch, weapon,</text>
+<text x="1204" y="771" class="detail" text-anchor="start">weapon_stat, magazine</text>
+</g>
+<path class="flow-line" d="M850 741H1138" stroke="#000" stroke-width="1.6" fill="none"/>
+<polygon points="1148,741 1138,736.5 1138,745.5" fill="#000"/>
+<text x="999.0" y="734" class="flow" text-anchor="middle">Weapon, patch and stat updates</text>
+<path class="flow-line" d="M1148 769H860" stroke="#000" stroke-width="1.6" fill="none"/>
+<polygon points="850,769 860,764.5 860,773.5" fill="#000"/>
+<text x="999.0" y="762" class="flow" text-anchor="middle">Existing catalog and revision data</text>
+<g class="store" data-store="D5">
+<path d="M1392 792H1148V864H1392M1193 792V864" fill="none" stroke="#000" stroke-width="1.7"/>
+<text x="1170" y="834" class="id" text-anchor="middle">D5</text>
+<text x="1204" y="816" class="label" text-anchor="start">Audit Log</text>
+<text x="1204" y="837" class="detail" text-anchor="start">audit</text>
+</g>
+<path class="flow-line" d="M850 823H1138" stroke="#000" stroke-width="1.6" fill="none"/>
+<polygon points="1148,823 1138,818.5 1138,827.5" fill="#000"/>
+<text x="999.0" y="816" class="flow" text-anchor="middle">Audit entries</text>
+<path class="flow-line" d="M1148 851H860" stroke="#000" stroke-width="1.6" fill="none"/>
+<polygon points="850,851 860,846.5 860,855.5" fill="#000"/>
+<text x="999.0" y="844" class="flow" text-anchor="middle">Saved audit history</text>
+</g>
+<path d="M48 884H1392" stroke="#000" stroke-width="1"/>
+<text x="48" y="909" class="legend" text-anchor="start">Arrows show data moving between an entity, process or store. Repeated D2 boxes refer to the same SQLite tables.</text>
+</svg>
